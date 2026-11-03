@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "hdmi_dlc",
+  "version": "${version}",
+  "name": "Hdmi Dlc",
+  "description": "Чит майнкрафтикс!",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hdmi_dlc/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "whiter.hdmi_dlc.client.Hdmi_dlcDataGenerator"
+    ],
+    "client": [
+      "whiter.hdmi_dlc.client.Hdmi_dlcClient"
+    ],
+    "main": [
+      "whiter.hdmi_dlc.Hdmi_dlc"
+    ]
+  },
+  "mixins": [
+    "hdmi_dlc.mixins.json",
+    {
+      "config": "hdmi_dlc.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
